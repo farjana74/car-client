@@ -15,11 +15,12 @@ import MyOrder from './Pages/Dashboard/MyOrder/MyOrder';
 import ManageOrder from './Pages/Dashboard/ManageOrder/ManageOrder';
 import AddReview from './Pages/Dashboard/AddReview/AddReview';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
   return (
-    <div>
+    <div className="home">
    <AuthProvider>
    <BrowserRouter>
     <Navigation></Navigation>
@@ -40,21 +41,7 @@ function App() {
   <Login></Login>
 
 </Route>
-<Route path="/myOrder">
-<MyOrder></MyOrder>
 
-</Route>
-<Route path="/manageOrder">
-<ManageOrder></ManageOrder>
-
-</Route>
-<Route path="/addReview">
-<AddReview></AddReview>
-
-</Route>
-<Route path="/addService">
-  <AddService></AddService>
-</Route>
 <PrivateRoute path="/booking/:bookingId">
   <Booking></Booking>
 </PrivateRoute>
@@ -65,6 +52,9 @@ function App() {
 <PrivateRoute path="/dashboard">
   <Dashboard></Dashboard>
 </PrivateRoute>
+<Route exact path="*">
+<NotFound></NotFound>
+</Route>
 
     </Switch>
     <Footer></Footer>

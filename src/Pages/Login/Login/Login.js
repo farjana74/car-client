@@ -8,7 +8,7 @@ import lowo from '../../../images/banner 1 (2).jpg'
 import "./Login.css";
 
 const Login = () => {
-    const { signInUsingGoogle, processLogin, setIsLoading } =useAuth
+    const { signInUsingGoogle, processLogin, setIsLoading, handleUserInfo,} =useAuth
     ()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -20,7 +20,9 @@ const Login = () => {
 
     const handleGoogleSignIn = () => {
         signInUsingGoogle()
-            .then(() => {
+            .then((result) => {
+                const user=result.user;
+                handleUserInfo(user.email,'PUT')
                 history.push(redirect_url);
             })
             .finally(() => setIsLoading(false));
@@ -39,6 +41,8 @@ const Login = () => {
         e.preventDefault();
         processLogin(email, password)
             .then((result) => {
+                const user=result.user
+                handleUserInfo(user.email,'PUT')
                 history.push(redirect_url);
                 setLogInError("");
             })
@@ -52,7 +56,7 @@ const Login = () => {
             <Container className="py-4">
                 <Row>
                     <Col xs={12} md={6} className="mb-5">
-                        <h1 className="text-center fw-bold">Dicin Hospital</h1>
+                        <h1 className="text-center fw-bold">Rotors</h1>
                         <img
                             className="logo"
                             src={lowo}

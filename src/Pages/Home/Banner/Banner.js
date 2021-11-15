@@ -1,48 +1,27 @@
 import React from 'react';
-import banner1 from '../../../images/banner 1 (1).jpg'
-import banner2 from '../../../images/banner 1 (2).jpg'
-import banner3 from '../../../images/banner 1 (3).jpg'
+import './Banner.css';
+
+
+import vec2 from '../../../images/vector 1 (3).jpg'
+
+
 
 const Banner = () => {
     return (
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div className="container  banner ">
+          <div className="row my-5 mx-auto ">
+            <div className="col-md-5   ">
+              <h2 className="fs-1 fw-bold fst-italic   " >Welcome to our most imported car</h2>
+              <p className="fs-4 text-muted fst-italic my-5">Say hello to our most imported car plateform at any resonavle price Make we are ensure that our car quality </p>
+             
+            </div>
+
+            <div className="col-md-6 align-items-center justify-content-center">
+<img  className="w-100 opacity-75" src={vec2} alt="" />
+            </div>
+          </div>
+
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src={banner1} class="d-block w-100" alt="..."/>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src={banner2} class="d-block w-100" alt="..."/>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src={banner3} class="d-block w-100" alt="..."/>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
     );
 };
 

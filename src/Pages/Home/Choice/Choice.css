@@ -1,8 +1,14 @@
 .center{
     text-align: center;
     font-size: 50px;
-    color:white;
+    color:rgba(2, 2, 43, 0.87);
 }
-.choice{
-    background-color: rgba(2, 2, 43, 0.87);
-}
+ .choice{
+    /* background-color: rgba(2, 2, 43, 0.87); */
+ }
+ .text{
+     color:c;
+ }
+
+
+

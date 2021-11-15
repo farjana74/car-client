@@ -35,6 +35,7 @@ const useFirebase = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
+                handleUserInfo(user.email,'POST')
                 setRegiError("");
                 setUserName(name);
             })
@@ -42,10 +43,24 @@ const useFirebase = () => {
                 setRegiError(error.message);
             });
     };
+
+    const handleUserInfo=(email,method)=>{
+        fetch('https://young-gorge-80259.herokuapp.com/addUserInfo',
+        {
+            method:method,
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify({email}),
+
+        })
+        .then(res=>res.json())
+        .then(result=>console.log(result))
+
+    }
     const setUserName = (name) => {
         updateProfile(auth.currentUser, { displayName: name }).then(() => {});
     };
     const processLogin = (email, password) => {
+        // handleUserInfo(user.email)
         return signInWithEmailAndPassword(auth, email, password);
     };
     const logOut = () => {
@@ -74,7 +89,7 @@ const useFirebase = () => {
         setIsLoading,
         logOut,
         signInUsingGoogle,
-        
+        handleUserInfo,
         registerNewUser,
         processLogin,
     };

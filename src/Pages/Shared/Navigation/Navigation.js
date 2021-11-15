@@ -16,7 +16,7 @@ const Navigation = () => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="ms-auto">
+        <Nav className="ms-auto fs-5 text-primary">
           <Nav.Link as={Link}  to="/home">Home</Nav.Link>
           <Nav.Link as={Link}  to="/explore">Explore</Nav.Link>
 

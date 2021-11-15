@@ -10,7 +10,7 @@ const AddReview = () => {
         console.log(data)
 
 
-        fetch('http://localhost:5000/review',{
+        fetch('https://young-gorge-80259.herokuapp.com/review',{
             method:"POST",
             headers:{
                 'content-type':'application/json'
@@ -28,15 +28,15 @@ const AddReview = () => {
     }
     return (
         <div className="add-service">
-            <h2 className="text-center">this is add service</h2>
+            <h2 className="text-center">Add review</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
             <input defaultValue={user.email} {...register("email")} />
       
       {errors.email && <span>This field is required</span>}
-      <input {...register("name", { required: true, maxLength: 20 })} placeholder=" Product Name" />
+      <input {...register("name", { required: true, maxLength: 20 })} placeholder=" Customer Name" />
+      <input {...register("img")} placeholder="Image" />
       <textarea {...register("description")} placeholder="Description" />
-      {/* <input {...register("img")} placeholder="Image" />
-      <input type="number" {...register("price")}placeholder="Price" /> */}
+     
       <input type="submit" />
     </form>
         </div>

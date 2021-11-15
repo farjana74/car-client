@@ -11,7 +11,8 @@ const Booking = () => {
 
 const onSubmit=(data)=>{
     console.log(data)
-    fetch('http://localhost:5000/order',{
+    data.status="Pending";
+    fetch('https://young-gorge-80259.herokuapp.com/order',{
         method:'POST',
         headers:{
             'content-type':'application/json'
@@ -32,7 +33,7 @@ const onSubmit=(data)=>{
     const {bookingId}=useParams()
     const[book,setBook]=useState({})
     useEffect(()=>{
-        fetch(`http://localhost:5000/services/${bookingId}`)
+        fetch(`https://young-gorge-80259.herokuapp.com/services/${bookingId}`)
 
         .then(res=>res.json())
         .then(data=>setBook(data))
@@ -70,7 +71,7 @@ const onSubmit=(data)=>{
       <input {...register("price")} placeholder="Price" />
       <br />
       <br />
-      <input {...register("place")} placeholder="Travel place" />
+      <input {...register("place")} placeholder=" place" />
       <br />
       <br />
      

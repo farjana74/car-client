@@ -7,7 +7,7 @@ const AddService = () => {
     const { register, handleSubmit ,reset} = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/services',data)
+        axios.post('https://young-gorge-80259.herokuapp.com/services',data)
         .then(res=>{
            if(res.data.insertedId){
                alert('added succesfully')
@@ -17,7 +17,7 @@ const AddService = () => {
     }
     return (
         <div className="add-service">
-            <h2 className="text-center">this is add service</h2>
+            <h2 className="text-center text-white my-5">Added service</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
       <textarea {...register("description")} placeholder="Description" />

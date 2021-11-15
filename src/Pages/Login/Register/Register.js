@@ -32,10 +32,10 @@ const Register = () => {
             setError("Password Must be at least 6 characters long.");
             return;
         }
-        if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
-            setError("Password Must contain 2 upper case");
-            return;
-        }
+        // if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
+        //     setError("Password Must contain 2 upper case");
+        //     return;
+        // }
         registerNewUser(email, password, name);
     };
 
@@ -44,7 +44,7 @@ const Register = () => {
             <Container className="py-5">
                 <Row>
                     <Col xs={12} md={6} className="mb-5">
-                        <h1 className="text-center fw-bold">Dicin Hospital</h1>
+                        <h1 className="text-center fw-bold">Car Portal</h1>
                         <img
                             className="logo"
                             src={lowo}
