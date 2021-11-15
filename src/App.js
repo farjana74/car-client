@@ -16,6 +16,7 @@ import ManageOrder from './Pages/Dashboard/ManageOrder/ManageOrder';
 import AddReview from './Pages/Dashboard/AddReview/AddReview';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import NotFound from './Pages/NotFound/NotFound';
+import About from './Pages/About/About';
 
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
   <Home></Home>
 
 </Route>
+ <Route exact path="/about">
+  <About></About>
+
+</Route> 
 <Route exact path="/explore">
   <Explore></Explore>
 
