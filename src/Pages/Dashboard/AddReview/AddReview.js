@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import useAuth from './../../../hooks/useAuth';
 import './AddReview.css'
 
+
 const AddReview = () => {
     const {user}=useAuth();
     const { register, reset,handleSubmit,formState: { errors }} = useForm();
@@ -33,10 +34,14 @@ const AddReview = () => {
             <input defaultValue={user.email} {...register("email")} />
       
       {errors.email && <span>This field is required</span>}
+    
       <input {...register("name", { required: true, maxLength: 20 })} placeholder=" Customer Name" />
       <input {...register("img")} placeholder="Image" />
       <textarea {...register("description")} placeholder="Description" />
-     
+
+
+    <input type="number"{...register("rating",{required:true,min:1,max:5})} placeholder="Rating 1-5"/>
+    
       <input type="submit" />
     </form>
         </div>

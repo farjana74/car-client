@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import { useEffect } from 'react';
 import useAuth from './../../../hooks/useAuth';
 import { useForm } from 'react-hook-form';
+import './Booking.css'
 
 const Booking = () => {
     const {user}=useAuth();
@@ -43,7 +44,7 @@ const onSubmit=(data)=>{
         <div className="row justify-content-between">
 <div className="col-md-6 border shadow border-primary rounded
 ">
-<div class="card">
+<div class="card booking">
   <img src={book.img} class="card-img-top" alt="..."/>
   <div class="card-body">
     <p class="card-text fs-5 fw-bold fst-italic text-muted  text-start">{book.description} we are now offering your car at discount price and you have o be habby that you are now our familly member and your car are most probably </p>

@@ -6,3 +6,6 @@ border:1px solid #808080;
 border-radius: 50px;
 background-color: rgb(152, 161, 187);
 }
+.rating-star{
+    color:tomato;
+}

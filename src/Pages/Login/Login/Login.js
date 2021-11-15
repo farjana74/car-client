@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import useAuth from './../../../hooks/useAuth';
 
 import lowo from '../../../images/banner 1 (2).jpg'
+import login from '../../../images/login.jpg';
+
 import "./Login.css";
 
 const Login = () => {
@@ -59,7 +61,7 @@ const Login = () => {
                         <h1 className="text-center fw-bold">Rotors</h1>
                         <img
                             className="logo"
-                            src={lowo}
+                            src={login}
                             alt=""
                         />
                     </Col>

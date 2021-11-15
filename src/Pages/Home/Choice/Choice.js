@@ -4,7 +4,7 @@ import './Choice.css';
 
 const Choice = () => {
     return (
-        <div className="container  choice">
+        <div className="shadow-lg  choice">
 
 
 <div className="container p-3">

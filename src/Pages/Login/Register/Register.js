@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 // import useAuth from "../../hooks/useAuth";
 import lowo from '../../../images/banner 1 (3).jpg'
+import login1 from '../../../images/login1.jpg'
 import useAuth from './../../../hooks/useAuth';
 const Register = () => {
     const { regiError, registerNewUser } = useAuth();
@@ -47,7 +48,7 @@ const Register = () => {
                         <h1 className="text-center fw-bold">Car Portal</h1>
                         <img
                             className="logo"
-                            src={lowo}
+                            src={login1}
                             alt=""
                         />
                     </Col>

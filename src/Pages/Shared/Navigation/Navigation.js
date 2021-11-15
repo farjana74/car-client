@@ -24,12 +24,12 @@ const Navigation = () => {
           {user?.email?
          
              <Nav>
-                <button onClick={logOut} on className="bg-primary"> Logout</button>
+                <button onClick={logOut} on className="bg-primary rounded"> Logout</button>
              
-             <Nav.Link className="text-white bg-primary rounded p-2" as={Link}  to="/dashboard">Dashboard</Nav.Link>
+             <Nav.Link className="text-white mx-2 bg-primary rounded p-1" as={Link}  to="/dashboard">Dashboard</Nav.Link>
              </Nav>
           :
-<Nav.Link className="text-white bg-primary rounded p-2"  as={Link}  to="/login#login">Login</Nav.Link>
+<Nav.Link className="text-white bg-primary rounded p-2 px-3"  as={Link}  to="/login#login">Login</Nav.Link>
 }
 <Navbar.Text className="text-primary">
 
