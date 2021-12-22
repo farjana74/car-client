@@ -28,7 +28,7 @@ Unit 9, Manor Industrial Estate, Lower Wash Lane, Warrington, WA4</h5>
     <Col xs={12} md={4} className="text-white" >
         <h2 className="my-5">Information</h2>
 <h4>Find a car nearest location</h4>
-<h4>Catalouge</h4>
+<h4>Cataloug</h4>
 <h4>FAQ</h4>
 <h4>ABout us</h4>
 <h4>Contact us</h4>
