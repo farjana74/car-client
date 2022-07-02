@@ -1,11 +1,14 @@
-.card{
-    height:550px;
+.card {
+    height: 100%;
+    transition: .3s;
 }
-.img{
-border:1px solid #808080;
-border-radius: 50px;
-background-color: rgb(152, 161, 187);
+
+.img {
+    border: 1px solid #808080;
+    border-radius: 50%;
+    background-color: rgb(152, 161, 187);
 }
-.rating-star{
-    color:tomato;
+
+.rating-star {
+    color: tomato;
 }

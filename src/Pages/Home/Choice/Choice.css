@@ -1,14 +1,42 @@
-.center{
+.center {
     text-align: center;
     font-size: 50px;
-    color:rgba(2, 2, 43, 0.87);
+    color: rgba(2, 2, 43, 0.87);
 }
- .choice{
+
+.choice {
     background-color: rgba(200, 200, 218, 0.87);
- }
- .text{
-     color:c;
- }
+    height: 100%;
+}
 
+.choice-card {
+    height: 100%;
+    /* background-color: rgba(2, 2, 43, 0.87);
+    color: white !important; */
 
+}
 
+.choice-card:hover {
+    border: 2p solid white;
+    background-color: rgba(2, 2, 43, 0.87);
+    color: white !important;
+    transition: .5s linear;
+    box-shadow: 10px 5px 5px white;
+
+}
+
+.fa-amazon-pay:hover {
+    color: white;
+}
+
+.fa-hand-holding-medical:hover {
+    color: white;
+}
+
+.fa-car-alt:hover {
+    color: white;
+}
+
+.text {
+    color: c;
+}

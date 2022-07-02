@@ -6,36 +6,45 @@ import Services from './../Services/Services';
 import Review from './../Review/Review';
 import Footer from './../../Shared/Footer/Footer';
 import About from './../../About/About';
+import WhyCarPortal from './WhyCarPortal/WhyCarPortal';
 
 const Home = () => {
     return (
-       <div>
-           
-        <Banner></Banner>
-        <br />
-        <br />
-        <br />
-        <br />
-        
-        
-        <br />
-        <Services></Services>
-        <br />
-        <br />
-        <br />
-        <br />
-        <Choice></Choice>
-        <br />
-        <br />
-        <br />
-        <br />
-        <Review></Review>
-        <br />
-        <br />
-        <br />
-        <br />
-       
-       </div>
+        <div>
+
+            <Banner></Banner>
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+            <br />
+            <WhyCarPortal></WhyCarPortal>
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+            <br />
+            <Services></Services>
+            <br />
+            <br />
+            <br />
+            <br />
+            <Choice></Choice>
+            <br />
+            <br />
+            <br />
+            <br />
+            <Review></Review>
+            <br />
+            <br />
+            <br />
+            <br />
+
+        </div>
     );
 };
 

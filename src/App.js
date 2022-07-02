@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from './Pages/Home/Home/Home';
-import { BrowserRouter,Switch,Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Explore from './Pages/Explore/Explore';
 import Navigation from './Pages/Shared/Navigation/Navigation';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -22,49 +22,53 @@ import About from './Pages/About/About';
 function App() {
   return (
     <div className="home">
-   <AuthProvider>
-   <BrowserRouter>
-    <Navigation></Navigation>
-    <Switch>
-<Route exact path="/">
-  <Home></Home>
+      <AuthProvider>
+        <BrowserRouter>
+          <Navigation></Navigation>
+          <br />
+          <br />
+          <br />
 
-</Route>
-<Route exact path="/home">
-  <Home></Home>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
 
-</Route>
- <Route exact path="/about">
-  <About></About>
+            </Route>
+            <Route exact path="/home">
+              <Home></Home>
 
-</Route> 
-<Route exact path="/explore">
-  <Explore></Explore>
+            </Route>
+            <Route exact path="/about">
+              <About></About>
 
-</Route>
-<Route path="/login">
-  <Login></Login>
+            </Route>
+            <Route exact path="/explore">
+              <Explore></Explore>
 
-</Route>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
 
-<PrivateRoute path="/booking/:bookingId">
-  <Booking></Booking>
-</PrivateRoute>
+            </Route>
 
-<Route path="/register">
-  <Register></Register>
-</Route>
-<PrivateRoute path="/dashboard">
-  <Dashboard></Dashboard>
-</PrivateRoute>
-<Route exact path="*">
-<NotFound></NotFound>
-</Route>
+            <PrivateRoute path="/booking/:bookingId">
+              <Booking></Booking>
+            </PrivateRoute>
 
-    </Switch>
-    <Footer></Footer>
-    </BrowserRouter>
-   </AuthProvider>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
+            <Route exact path="*">
+              <NotFound></NotFound>
+            </Route>
+
+          </Switch>
+          <Footer></Footer>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

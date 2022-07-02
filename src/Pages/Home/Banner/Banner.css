@@ -1,9 +1,29 @@
-.banner{
-     /* background-image: url('https://i.ibb.co/wdV0Lym/depositphotos-42048011-stock-illustration-black-compact-car.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; */
-      /* height: 700px;   */
-      /* background-color:dark rgb(39, 39, 221)!important; */
+.banner {
+  /* background-image: url('https://i.ibb.co/BGrJ077/watercolor-background-87374-69.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  background-color: dark rgb(39, 39, 221) !important; */
+  /* opacity: 0.1; */
 
-      
-} 
+
+}
+
+.hero-img {
+  animation: move 2.5s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-15px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, -15px);
+
+  }
+
+  100% {
+    transform: translate(-15px, 0px);
+  }
+}

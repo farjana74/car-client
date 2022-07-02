@@ -1,3 +1,27 @@
-.buttons{
-    background-color:rgba(2, 2, 43, 0.712) ;
+.buttons {
+    background-color: rgba(2, 2, 43, 0.712);
+}
+
+.service-header {
+    font-size: 25px;
+}
+
+.service-description {
+    font-size: 18px;
+}
+
+.service-price {
+    font-size: 15px;
+}
+
+.show-img {
+    transition: all .5s zoom ease-in-out !important;
+}
+
+.show-img:hover {
+    color: brown;
+}
+
+.service-title {
+    color: rgba(2, 2, 43, 0.712);
 }
