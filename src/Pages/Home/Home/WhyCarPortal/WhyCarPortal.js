@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./WhyCarPortal.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WhyCarPortal = () => {
+    useEffect(() => {
+        AOS.init({ duration: 2000 });
+    }, [])
     return (
 
-        <div className='container-fluid py-5'  >
+        <div data-aos="fade-up" className='container-fluid py-5'  >
             <div className='container danapuriOffers-bg  position-relative mx-auto text-start '
             >
                 {/* <img className='' src={whyDanapuri.image_url} alt="" /> */}

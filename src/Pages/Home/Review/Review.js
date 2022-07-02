@@ -4,9 +4,13 @@ import './Review.css'
 import { useEffect } from 'react';
 import ShowReview from '../ShowReview/ShowReview';
 
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Review = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
   const [review, setReview] = useState([])
   useEffect(() => {
     fetch('https://young-gorge-80259.herokuapp.com/review')
@@ -17,7 +21,7 @@ const Review = () => {
 
 
     <div className="container">
-      <h2 className=" text-primary text-center fw-bold my-5 text   fst-italic">
+      <h2 data-aos="zoom-in" className=" text-primary text-center fw-bold my-5 text   fst-italic">
         What Clients Say about Us
       </h2>
       <div className='row row-cols-1 row-cols-sm-1  row-cols-lg-3 g-4 g-lg-3'>

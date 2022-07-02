@@ -1,3 +1,12 @@
 .show {
     height: 100%;
 }
+
+.explore-bg {
+    background-image: url('https://i.ibb.co/tQZQGqS/banner-1-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    opacity: 0.5;
+}

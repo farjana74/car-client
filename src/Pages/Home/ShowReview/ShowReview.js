@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import review1 from '../../../images/reviewer-1.png'
 import './ShowReview.css'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Card, Col } from 'react-bootstrap';
 import './ShowReview.css'
 import Rating from 'react-rating';
@@ -9,6 +10,9 @@ import Slider from "react-slick";
 
 const ShowReview = ({ rw }) => {
   const { name, img, email, description, rating } = rw;
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
   const settings = {
     dots: true,
     infinite: true,
@@ -21,7 +25,7 @@ const ShowReview = ({ rw }) => {
   };
   return (
 
-    <div class="col ">
+    <div data-aos="zoom-in" class="col ">
       <Card className="shadow rounded cards p-3">
         <Card.Img variant="top" className="w-50 img mx-auto " src={img} />
         <Card.Body>
